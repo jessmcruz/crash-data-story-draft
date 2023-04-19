@@ -116,11 +116,22 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Methods</h2>
-          <p>To find this data, we saved <a href='https://docs.google.com/spreadsheets/d/1HI899d6iCizLMo9bB4Q9whmuD6UXmxZjBBhVhqAsIZE/edit?usp=sharing'>the list of Hartford crashes</a> (not including Interstate crashes) provided by Jack from the UConn Crash Repository. We uploaded this data into mapshaper in order to create a map of Hartford to be combined with our intersection data later on. Using the “console” tab, we typed “-points x=Longitude y=Latitude” and “-proj wgs84” to make the points take the shape of Hartford rather than a grid.</p>
-          </p>We looked at <a href='https://datavizforall.org/hartford-crashes/'>the Hartford crash map</a> to determine intersections that have had high numbers of crashes since 2018. We then used placemark to create polygons in each of those intersections and named them according to their location as well as titled them as intersections. We exported this as a geojson file so that we will be able to add to it and eventually combine it with the mapshaper map.</p>
+          <p>To find this data, we saved <a href='https://docs.google.com/spreadsheets/d/1HI899d6iCizLMo9bB4Q9whmuD6UXmxZjBBhVhqAsIZE/edit?usp=sharing'>this list of Hartford crashes</a> (not including Interstate crashes) provided by Jack from the UConn Crash Repository. We uploaded his data into mapshaper in order to create a map of Hartford to be combined with our intersection data later on. Using the “console” tab, we typed “-points x=Longitude y=Latitude” and “-proj wgs84” to make the points take the shape of Hartford rather than a grid.</p>
+		
+		 <img src="mapshaper.png" style="width: 100%; margin: 30px 0">
+		
+          </p>Then, to determine the intersections that have had a high number of crashes since 2018, we looked at the <a href='https://datavizforall.org/hartford-crashes/'> Hartford crash heat map</a> with bright red areas in circular shapes above intersections which represent high density of crashes at the location it covers. Although the ten intersections we picked may not be definitively the intersections with the highest frequencies of crashes, a high occurrence of crashes still exists. Also, it must be noted that in January 2023, the CT Insider published a story on high-crash intersections in which they ranked the top 10 intersections with the highest crashes from 2020-2022 which has much variation from ours. However, their data was based on a different time frame than ours, and we are unsure of what they considered to be a part of each intersection which can explain the variability in our results.</p>
+	    
+	    </p>We then used placemark to create polygons in each of those intersections and named them according to their location as well as titled them as intersections. We exported this as a geojson file so that we will be able to add to it and eventually combine it with the mapshaper map.</p>
+
+		  <img src="placemark.png" style="width: 100%; margin: 30px 0">
+
         </p>After that, we imported the placemark file into mapshaper and merged it with the existing map by typing “-join polygons10 fields=’intersection’” and then exported it as a geojson.</p>
-        </p>The following images show the placemark map of intersections, the mapshaper map of crashes, and the combined mapshaper map.</p>
-        <p>--Add image code: Input (2) images (Figure 2 & 3)--<p>
+
+ 		  <img src="combined-map-polygons.png" style="width: 100%; margin: 30px 0">
+
+        </p>The above images show the mapshaper map of crashes, the placemark map of intersections, and the combined mapshaper map.</p>
+       
       
         </div>
       </div>
